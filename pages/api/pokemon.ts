@@ -2,6 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type Pokemon = {
+  id: number;
   name: string;
   owned: boolean;
 };
@@ -11,7 +12,7 @@ export default function handler(
   res: NextApiResponse<Pokemon[]>
 ) {
   res.status(200).json([
-    { name: "Pikachu", owned: true },
-    { name: "Charmander", owned: false },
+    { id: 25, name: "Pikachu", owned: true },
+    { id: 1, name: "Bulbasaur", owned: false },
   ]);
 }

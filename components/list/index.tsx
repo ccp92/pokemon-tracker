@@ -11,8 +11,12 @@ const PokemonList = () => {
 
   return (
     <ul>
-      {data.map((pokemon: { name: string; owned: boolean }) => (
-        <PokemonDetails name={pokemon.name} owned={pokemon.owned} />
+      {data.map((pokemon: { id: number; name: string; owned: boolean }) => (
+        <PokemonDetails
+          key={pokemon.id}
+          name={pokemon.name}
+          owned={pokemon.owned}
+        />
       ))}
     </ul>
   );
