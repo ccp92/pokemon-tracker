@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+import PokemonList from "../components/list";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -21,6 +21,8 @@ const Home: NextPage = () => {
         <p className={styles.description}>
           Get started by looking at the list below
         </p>
+
+        <PokemonList />
       </main>
     </div>
   );
